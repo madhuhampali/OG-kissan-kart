@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kissan Cart | Direct farm-to-home marketplace</title>
+    <meta
+      name="description"
+      content="Kissan Cart helps farmers sell fresh produce directly online and share their farming stories with buyers."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero-shell">
+      <nav class="navbar">
+        <a class="brand" href="#" data-i18n="brand">Kissan Cart</a>
+        <div class="nav-actions">
+          <div class="language-switch" aria-label="Language switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="hi">हिं</button>
+            <button class="lang-btn" data-lang="kn">ಕನ</button>
+            <button class="lang-btn" data-lang="te">తెలు</button>
+            <button class="lang-btn" data-lang="ta">த</button>
+          </div>
+          <div class="nav-links">
+            <a href="#products" data-i18n="navProducts">Products</a>
+            <a href="#farmers" data-i18n="navStories">Farm Stories</a>
+            <a href="#sell" data-i18n="navSell">Sell Now</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Fresh from the field, trusted by your neighborhood</p>
+          <h1 data-i18n="heroTitle">Sell your harvest directly online and bring buyers closer to your land.</h1>
+          <p class="hero-text" data-i18n="heroText">
+            Kissan Cart is a farmer-first marketplace where growers can list produce,
+            share their farm stories, and build direct relationships with customers.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#sell" data-i18n="heroPrimaryBtn">Start selling</a>
+            <a class="btn btn-secondary" href="#products" data-i18n="heroSecondaryBtn">Explore products</a>
+          </div>
+          <ul class="hero-highlights">
+            <li data-i18n="highlightOne">Live field-to-door delivery</li>
+            <li data-i18n="highlightTwo">Transparent pricing</li>
+            <li data-i18n="highlightThree">Trusted farmer profiles</li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <h3 data-i18n="heroCardTitle">This week on Kissan Cart</h3>
+          <div class="metric-row">
+            <div>
+              <strong>1,248+</strong>
+              <span data-i18n="metricFarmers">Active farmers</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span data-i18n="metricInquiries">Buyer inquiries</span>
+            </div>
+          </div>
+          <div class="mini-list">
+            <div data-i18n="miniOne">Organic tomatoes • ₹70/kg</div>
+            <div data-i18n="miniTwo">Fresh sugarcane juice • ₹40</div>
+            <div data-i18n="miniThree">Farm-fresh eggs • ₹8/piece</div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="benefit-strip" aria-label="Farmer advantages">
+      <div class="benefit-card">
+        <h3>Direct from field</h3>
+        <p>Sell harvests without middlemen and keep more value in your hands.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Trusted buyer reach</h3>
+        <p>Show your produce to homes, shops, and local communities in one place.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Farm stories that sell</h3>
+        <p>Share your land, methods, and values so buyers feel connected to your harvest.</p>
+      </div>
+    </section>
+
+    <section class="feature-section" aria-label="Farmer support tools">
+      <div class="feature-card">
+        <div class="feature-icon">☀️</div>
+        <h3 data-i18n="weatherTitle">Live weather</h3>
+        <p data-i18n="weatherText">Check today’s weather before harvesting or transporting your produce.</p>
+        <div class="feature-pill" data-i18n="weatherValue">28°C • Sunny • Good for harvest</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <h3 data-i18n="tipsTitle">Crop care tips</h3>
+        <p data-i18n="tipsText">Helpful reminders to keep your crops healthy and market-ready.</p>
+        <ul class="tips-list">
+          <li data-i18n="tipOne">Water early in the morning.</li>
+          <li data-i18n="tipTwo">Check soil moisture before fertilizing.</li>
+          <li data-i18n="tipThree">Protect fresh produce from heat during transit.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3 data-i18n="trackingTitle">Order tracking</h3>
+        <p data-i18n="trackingText">Keep buyers updated with clear delivery progress.</p>
+        <div class="tracking-steps">
+          <span data-i18n="trackingStep1">Packed</span>
+          <span data-i18n="trackingStep2">In transit</span>
+          <span data-i18n="trackingStep3">Out for delivery</span>
+          <span data-i18n="trackingStep4">Delivered</span>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="section" id="products">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="marketplaceEyebrow">Marketplace</p>
+            <h2 data-i18n="productsHeading">Fresh produce from real farms</h2>
+          </div>
+          <p data-i18n="productsSubtext">Browse verified crops and food products posted by local growers.</p>
+        </div>
+        <div class="filters" id="filters"></div>
+        <div class="product-grid" id="products-grid"></div>
+      </section>
+
+      <section class="section alt-section" id="farmers">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="storiesEyebrow">Farmer stories</p>
+            <h2 data-i18n="storiesHeading">Meet the people behind the harvest</h2>
+          </div>
+          <p data-i18n="storiesSubtext">Every listing comes with a story about the land, the crop, and the farmer’s journey.</p>
+        </div>
+        <div class="story-grid" id="story-list"></div>
+      </section>
+
+      <section class="section" id="sell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="portalEyebrow">Farmer portal</p>
+            <h2 data-i18n="portalHeading">Sign in to manage your field listings</h2>
+          </div>
+          <p data-i18n="portalSubtext">Farmers can log in, publish fresh harvests, and keep buyer requests organized from one simple dashboard.</p>
+        </div>
+
+        <div class="sell-grid">
+          <div class="card form-card">
+            <div id="login-panel">
+              <h3 data-i18n="signinTitle">Farmer sign-in</h3>
+              <p data-i18n="signinText">Use any email and password to preview the dashboard experience.</p>
+              <form id="login-form">
+                <label>
+                  <span data-i18n="emailLabel">Email or phone</span>
+                  <input type="text" name="email" data-placeholder-key="emailPlaceholder" placeholder="farmer@example.com" required />
+                </label>
+                <label>
+                  <span data-i18n="passwordLabel">Password</span>
+                  <input type="password" name="password" data-placeholder-key="passwordPlaceholder" placeholder="••••••••" required />
+                </label>
+                <button class="btn btn-primary" type="submit" data-i18n="loginBtn">Log in</button>
+              </form>
+              <p class="hint" data-i18n="signinHint">Demo access is intentionally simple for quick testing.</p>
+            </div>
+
+            <div id="dashboard-panel" hidden>
+              <div class="dashboard-top">
+                <div>
+                  <h3 id="welcome-title" data-i18n="welcomeTitle">Welcome back</h3>
+                  <p data-i18n="dashboardText">Manage your live harvest posts and buyer visibility.</p>
+                </div>
+                <button class="btn btn-secondary" id="logout-btn" type="button" data-i18n="logoutBtn">Log out</button>
+              </div>
+
+              <form id="listing-form">
+                <label>
+                  <span data-i18n="cropLabel">Crop name</span>
+                  <input type="text" name="cropName" data-placeholder-key="cropPlaceholder" placeholder="Tomatoes / Paddy" required />
+                </label>
+                <label>
+                  <span data-i18n="quantityLabel">Quantity available</span>
+                  <input type="text" name="quantity" data-placeholder-key="quantityPlaceholder" placeholder="200 kg" required />
+                </label>
+                <label>
+                  <span data-i18n="locationLabel">Pickup location</span>
+                  <input type="text" name="location" data-placeholder-key="locationPlaceholder" placeholder="Village, district" required />
+                </label>
+                <label>
+                  <span data-i18n="priceLabel">Suggested price</span>
+                  <input type="text" name="price" data-placeholder-key="pricePlaceholder" placeholder="₹70 per kg" required />
+                </label>
+                <button class="btn btn-primary" type="submit" data-i18n="publishBtn">Publish listing</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="card summary-card">
+            <h3 id="dashboard-heading" data-i18n="visibilityHeading">Buyer visibility</h3>
+            <div id="dashboard-preview">
+              <p class="empty-state" data-i18n="previewEmpty">Sign in to see your live listing summary and active harvest posts.</p>
+            </div>
+            <div id="listings-list" class="listing-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p data-i18n="footerText">© 2026 Kissan Cart. Built for farmers, by farmers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
